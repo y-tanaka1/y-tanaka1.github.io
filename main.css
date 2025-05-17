@@ -1,0 +1,27 @@
+audio {
+  display: none;
+}
+#play {
+  display: inline-block;
+  margin: 0.5em;
+
+  cursor: pointer;
+  fill: #42afe3;
+}
+
+.inline-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.chinese-text {
+  font-size: 16px;
+}
+ul {
+  padding-left: 6px;
+}
+
+li {
+  list-style: none;
+}
