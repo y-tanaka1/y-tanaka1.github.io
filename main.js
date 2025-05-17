@@ -61,7 +61,7 @@ function dataArray(els) {
       `<span class="inline-content">` +
       `<span class="chinese-text">${chinese}</span>` +
       `<audio id="${audioId}" src="audio/${chinese}.mp3" controls></audio>` +
-      `<img src="materials/volume-up-fill.svg" width="28" height="28" id="${playId}" class="play-button" />` +
+      `<img src="materials/volume-off-fill.svg" width="28" height="28" id="${playId}" class="play-button" />` +
       "</span></li>" +
       `<li>${pronunciation}</li></ul>`;
 
@@ -72,6 +72,12 @@ function dataArray(els) {
       const playButton = document.getElementById(playId);
       playButton.addEventListener("click", () => {
         audio.play();
+      });
+      audio.addEventListener("play", () => {
+        playButton.src = "materials/volume-up-fill.svg";
+      });
+      audio.addEventListener("ended", () => {
+        playButton.src = "materials/volume-off-fill.svg";
       });
     }, 0);
   });
