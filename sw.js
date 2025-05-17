@@ -1,5 +1,5 @@
 var CACHE_NAME = "ChinesePhrases-caches";
-var urlsToCache = ["/CP/"];
+var urlsToCache = ["/ChinesePhrase/"];
 
 // インストール処理
 self.addEventListener("install", function (event) {
